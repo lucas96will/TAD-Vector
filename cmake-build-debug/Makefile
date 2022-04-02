@@ -129,44 +129,117 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Vector
+# Target rules for targets named pruebas_vector.c
 
 # Build rule for target.
-Vector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Vector
-.PHONY : Vector
+pruebas_vector.c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pruebas_vector.c
+.PHONY : pruebas_vector.c
 
 # fast build rule for target.
-Vector/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/build
-.PHONY : Vector/fast
+pruebas_vector.c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/build
+.PHONY : pruebas_vector.c/fast
 
-library.obj: library.c.obj
+#=============================================================================
+# Target rules for targets named prueba
 
-.PHONY : library.obj
+# Build rule for target.
+prueba: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 prueba
+.PHONY : prueba
+
+# fast build rule for target.
+prueba/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/build
+.PHONY : prueba/fast
+
+pruebas_vector.obj: pruebas_vector.c.obj
+
+.PHONY : pruebas_vector.obj
 
 # target to build an object file
-library.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/library.c.obj
-.PHONY : library.c.obj
+pruebas_vector.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/pruebas_vector.c.obj
+.PHONY : pruebas_vector.c.obj
 
-library.i: library.c.i
+pruebas_vector.i: pruebas_vector.c.i
 
-.PHONY : library.i
+.PHONY : pruebas_vector.i
 
 # target to preprocess a source file
-library.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/library.c.i
-.PHONY : library.c.i
+pruebas_vector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/pruebas_vector.c.i
+.PHONY : pruebas_vector.c.i
 
-library.s: library.c.s
+pruebas_vector.s: pruebas_vector.c.s
 
-.PHONY : library.s
+.PHONY : pruebas_vector.s
 
 # target to generate assembly for a file
-library.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Vector.dir\build.make CMakeFiles/Vector.dir/library.c.s
-.PHONY : library.c.s
+pruebas_vector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/pruebas_vector.c.s
+.PHONY : pruebas_vector.c.s
+
+testing.obj: testing.c.obj
+
+.PHONY : testing.obj
+
+# target to build an object file
+testing.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/testing.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/testing.c.obj
+.PHONY : testing.c.obj
+
+testing.i: testing.c.i
+
+.PHONY : testing.i
+
+# target to preprocess a source file
+testing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/testing.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/testing.c.i
+.PHONY : testing.c.i
+
+testing.s: testing.c.s
+
+.PHONY : testing.s
+
+# target to generate assembly for a file
+testing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/testing.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/testing.c.s
+.PHONY : testing.c.s
+
+vector.obj: vector.c.obj
+
+.PHONY : vector.obj
+
+# target to build an object file
+vector.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/vector.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/vector.c.obj
+.PHONY : vector.c.obj
+
+vector.i: vector.c.i
+
+.PHONY : vector.i
+
+# target to preprocess a source file
+vector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/vector.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/vector.c.i
+.PHONY : vector.c.i
+
+vector.s: vector.c.s
+
+.PHONY : vector.s
+
+# target to generate assembly for a file
+vector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pruebas_vector.c.dir\build.make CMakeFiles/pruebas_vector.c.dir/vector.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\prueba.dir\build.make CMakeFiles/prueba.dir/vector.c.s
+.PHONY : vector.c.s
 
 # Help Target
 help:
@@ -176,10 +249,17 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Vector
-	@echo ... library.obj
-	@echo ... library.i
-	@echo ... library.s
+	@echo ... prueba
+	@echo ... pruebas_vector.c
+	@echo ... pruebas_vector.obj
+	@echo ... pruebas_vector.i
+	@echo ... pruebas_vector.s
+	@echo ... testing.obj
+	@echo ... testing.i
+	@echo ... testing.s
+	@echo ... vector.obj
+	@echo ... vector.i
+	@echo ... vector.s
 .PHONY : help
 
 

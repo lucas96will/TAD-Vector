@@ -1,3 +1,4 @@
-C:/Users/Lucas Williams/CLionProjects/Vector/cmake-build-debug/CMakeFiles/Vector.dir
+C:/Users/Lucas Williams/CLionProjects/Vector/cmake-build-debug/CMakeFiles/pruebas_vector.c.dir
 C:/Users/Lucas Williams/CLionProjects/Vector/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lucas Williams/CLionProjects/Vector/cmake-build-debug/CMakeFiles/prueba.dir
 C:/Users/Lucas Williams/CLionProjects/Vector/cmake-build-debug/CMakeFiles/rebuild_cache.dir

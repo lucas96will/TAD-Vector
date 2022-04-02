@@ -3,8 +3,38 @@
 
 // Funciones a implementar.
 
-// ...
+//funcion de uso propio
+bool en_el_rango(vector_t* vector, size_t pos){
+    return (pos >= 0 && pos < vector_largo(vector));
+}
 
+void vector_destruir(vector_t *vector){
+    free(vector->datos);
+    free(vector);
+}
+
+bool vector_obtener(vector_t *vector, size_t pos, int *valor){
+    bool pos_aceptado = en_el_rango(vector, pos);
+    if(pos_aceptado){
+        (*valor) = vector->datos[pos];
+    } else{
+        valor = NULL;
+    }
+    return pos_aceptado;
+}
+
+bool vector_guardar(vector_t *vector, size_t pos, int valor){
+    bool pos_aceptado = en_el_rango(vector, pos);
+    if(pos_aceptado){
+        vector->datos[pos] = valor;
+    }
+    return pos_aceptado;
+}
+
+size_t vector_largo(vector_t *vector){
+    return vector->tam;
+}
+// ...
 
 // Funciones ya implementadas.
 
