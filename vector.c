@@ -14,21 +14,21 @@ void vector_destruir(vector_t *vector){
 }
 
 bool vector_obtener(vector_t *vector, size_t pos, int *valor){
-    bool pos_aceptado = en_el_rango(vector, pos);
-    if(pos_aceptado){
-        (*valor) = vector->datos[pos];
-    } else{
-        valor = NULL;
+    if(!en_el_rango(vector, pos)){
+        return false;
     }
-    return pos_aceptado;
+
+    (*valor) = vector->datos[pos];
+    return true;
 }
 
 bool vector_guardar(vector_t *vector, size_t pos, int valor){
-    bool pos_aceptado = en_el_rango(vector, pos);
-    if(pos_aceptado){
-        vector->datos[pos] = valor;
+    if(!en_el_rango(vector, pos)){
+        return false;
     }
-    return pos_aceptado;
+
+    vector->datos[pos] = valor;
+    return true;
 }
 
 size_t vector_largo(vector_t *vector){
